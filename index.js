@@ -43,5 +43,5 @@ server.get('/envs', (req, res) => {
 })
 
 server.listen(PORT, () => {
-  console.log(`Application is listening at port ${PORT}`);
+  console.log(`Application is listening at port ${PORT} and should be broken`);
 });
