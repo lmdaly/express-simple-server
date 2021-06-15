@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3300;
 server.use(express.static('public'));
 
 server.get('/', (_req, res) => {
-  res.send('Hello Sprint Demo!');
+  res.status(500).send("500 error")
 });
 
 server.get('/fetch-wordpress-graphql', async (_req, res) => {
@@ -34,7 +34,7 @@ server.get('/fetch-wordpress-graphql', async (_req, res) => {
   `;
 
   const response = await axios.post(process.env.GRAPHQL_API_URL, { query });
-  res.send(response.data.data.posts.nodes);
+  res.send(response.data.data.posts.nodes)
 });
 
 server.get('/envs', (req, res) => {
@@ -45,3 +45,5 @@ server.get('/envs', (req, res) => {
 server.listen(PORT, () => {
   console.log(`Application is listening at port ${PORT}`);
 });
+
+console.log(`Hello logs I am sending 500s`);
