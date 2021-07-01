@@ -5,9 +5,14 @@ const PORT = process.env.PORT || 3300;
 
 server.use(express.static('public'));
 
-server.get('/', (_req, res) => {
+/*server.get('/', (_req, res) => {
   res.status(500).send("500 error")
+});*/
+
+server.get('/', (_req, res) => {
+  res.send('Hello Sprint Demo!');
 });
+
 
 server.get('/fetch-wordpress-graphql', async (_req, res) => {
   const query = `
