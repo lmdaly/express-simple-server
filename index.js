@@ -18,7 +18,7 @@ server.get('/fetch-wordpress-graphql', async (_req, res) => {
   const query = `
     query QueryPosts {
       posts {
-        nodes {
+        nodes 
           id
           content
           title
@@ -45,10 +45,10 @@ server.get('/fetch-wordpress-graphql', async (_req, res) => {
 server.get('/envs', (req, res) => {
   console.log(process.env);
   res.send('Envs displayed in logs!');
-});
+})
 
 server.listen(PORT, () => {
-  console.log(`Application is listening at port ${PORT}`);
+  console.log(`Application is listening at port ${PORT} and should be broken`);
 });
 
 console.log(`Hello logs I am sending 500s`);
