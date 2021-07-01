@@ -4,6 +4,7 @@ const server = express();
 const PORT = process.env.PORT || 3300;
 
 server.use(express.static('public'));
+process.title = "test-app";
 
 /*server.get('/', (_req, res) => {
   res.status(500).send("500 error")
