@@ -11,7 +11,7 @@ process.title = "test-app";
 });*/
 
 server.get('/', (_req, res) => {
-  res.send('Hello Sprint Demo!');
+  res.send('Hello Hackathon 2021!');
 });
 
 
