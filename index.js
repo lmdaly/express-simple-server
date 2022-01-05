@@ -6,13 +6,13 @@ const PORT = process.env.PORT || 3300;
 server.use(express.static('public'));
 process.title = "test-app";
 
-/*server.get('/', (_req, res) => {
-  res.status(500).send("500 error")
-});*/
-
 server.get('/', (_req, res) => {
-  res.send('Hello Hackathon 2021!');
+  setTimeout(() => {  res.status(500).send("500 error") }, 20000);
 });
+
+//server.get('/', (_req, res) => {
+//  res.send('Hello Hackathon 2021!');
+//});
 
 
 server.get('/fetch-wordpress-graphql', async (_req, res) => {
