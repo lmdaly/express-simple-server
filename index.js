@@ -7,7 +7,7 @@ server.use(express.static('public'));
 process.title = "test-app";
 
 server.get('/', (_req, res) => {
-  setTimeout(() => {  res.status(500).send("500 error") }, 20000);
+  setTimeout(() => {  res.send("Hello  world") }, 18000);
 });
 
 //server.get('/', (_req, res) => {
