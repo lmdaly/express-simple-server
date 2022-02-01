@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3300;
 server.use(express.static('public'));
 process.title = "test-app";
 
-server.get('/', (_req, res) => {
+server.get('/', (req, res) => {
   console.log('received a request');
 
   var body = {
