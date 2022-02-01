@@ -7,7 +7,17 @@ server.use(express.static('public'));
 process.title = "test-app";
 
 server.get('/', (_req, res) => {
-  setTimeout(() => {  res.send("Hello  world") }, 18000);
+  console.log('received a request');
+
+  var body = {
+    'status': 'OK',
+    'request': {
+      'headers': req.headers
+    }
+  }
+
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(body, null, 4));
 });
 
 //server.get('/', (_req, res) => {
