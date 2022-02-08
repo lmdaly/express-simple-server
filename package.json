@@ -2,7 +2,7 @@
   "name": "express-simple-server",
   "version": "1.0.0",
   "description": "Simple Express Server",
-  "main": "index.js"
+  "main": "index.js",
   "engines": {
     "node": "14.13.2"
   },
