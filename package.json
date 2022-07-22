@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "stop": "pkill --signal SIGINT test-app",
-    "wpe-build": "knode build.js"
+    "wpe-build": "node build.js"
   },
   "author": "Konrad Glowacki <konrad.glowacki@wpengine.com> (wpengine.com)",
   "license": "ISC",
