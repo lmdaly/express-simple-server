@@ -58,6 +58,11 @@ server.get('/envs', (req, res) => {
   res.send('Envs displayed in logs!');
 })
 
+app.get('/headers', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(req.headers, null, 4));
+})
+
 server.listen(PORT, () => {
   console.log(`Application is listening at port ${PORT} and should be broken`);
 });
