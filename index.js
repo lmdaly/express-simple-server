@@ -68,3 +68,8 @@ server.listen(PORT, () => {
 });
 
 console.log(`Hello logs I am sending 500s`);
+
+const cpuData = os.cpus()
+const numOfCpus = os.cpus().length
+console.log(numOfCpus)
+console.log(cpuData)
