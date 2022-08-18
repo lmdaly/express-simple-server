@@ -9,20 +9,18 @@ process.title = "test-app";
 
 server.get('/', (req, res) => {
   console.log('received a request');
-
+  const cpuData = os.cpus()
+  const numOfCpus = os.cpus().length
   var body = {
     'status': 'OK',
     'request': {
       'headers': req.headers
+      'cpuinfo': numOfCpus
     }
   }
 
   res.writeHead(200, { 'Content-Type': 'application/json' });
-  const cpuData = os.cpus()
-  const numOfCpus = os.cpus().length
   res.end(JSON.stringify(body, null, 4));
-  res.send(cpuData)
-  res.send(numOfCpus)
 });
 
 //server.get('/', (_req, res) => {
