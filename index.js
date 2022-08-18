@@ -2,6 +2,7 @@ const axios = require('axios');
 const express = require('express');
 const server = express();
 const PORT = process.env.PORT || 3300;
+const os = require("os")
 
 server.use(express.static('public'));
 process.title = "test-app";
@@ -17,7 +18,11 @@ server.get('/', (req, res) => {
   }
 
   res.writeHead(200, { 'Content-Type': 'application/json' });
+  const cpuData = os.cpus()
+  const numOfCpus = os.cpus().length
   res.end(JSON.stringify(body, null, 4));
+  res.send(cpuData)
+  res.send(numOfCpus)
 });
 
 //server.get('/', (_req, res) => {
